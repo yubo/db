@@ -1,0 +1,12 @@
+Makefile
+PORT
+*.gz
+*.cmake
+CMakeFiles/
+CMakeCache.txt
+*.swp
+*.a
+Makefile
+Testing/
+test/dbtest
+G*
