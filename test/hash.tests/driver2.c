@@ -50,10 +50,11 @@ static char sccsid[] = "@(#)driver2.c	8.1 (Berkeley) 6/4/93";
 
 #include <sys/file.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "ndbm.h"
 
-int my_hash(key, len)
-	char	*key;
+u_int32_t my_hash(key, len)
+	void	*key;
 	int	len;
 {
 	return(17);		/* So I'm cruel... */
@@ -73,7 +74,7 @@ main(argc, argv)
 	info.bsize = 1024;
 	info.ffactor = 5;
 	info.nelem = 1;
-	info.cachesize = NULL;
+	info.cachesize = 0;
 #ifdef HASH_ID_PROGRAM_SPECIFIED
 	info.hash_id = HASH_ID_PROGRAM_SPECIFIED;
 	info.hash_func = my_hash;

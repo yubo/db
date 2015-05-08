@@ -10,3 +10,4 @@ Makefile
 Testing/
 test/dbtest
 G*
+test/

@@ -6,3 +6,5 @@ target_link_libraries(dbtest db)
 
 enable_testing()
 add_test(dbtest ./run.test)
+
+add_subdirectory(hash.tests)
